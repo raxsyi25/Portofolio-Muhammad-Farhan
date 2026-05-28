@@ -1895,6 +1895,278 @@
       .project-card:hover .project-thumb-overlay {
         opacity: 1;
       }
+
+      /* ============================================================
+         RESPONSIVE — MOBILE & TABLET
+         Semua kode di atas tetap utuh; bagian ini hanya tambahan
+         ============================================================ */
+
+      /* Hamburger menu button — hanya muncul di mobile */
+      .nav-hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        z-index: 200;
+      }
+      .nav-hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--text);
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      .nav-hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .nav-hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .nav-hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      /* Mobile nav drawer */
+      @media (max-width: 768px) {
+        body {
+          cursor: auto;
+        }
+        .cursor,
+        .cursor-ring {
+          display: none;
+        }
+
+        /* Navbar */
+        nav {
+          padding: 16px 20px;
+        }
+        .nav-hamburger {
+          display: flex;
+        }
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 70vw;
+          max-width: 280px;
+          height: 100vh;
+          background: rgba(7, 6, 20, 0.98);
+          backdrop-filter: blur(20px);
+          border-left: 1px solid var(--border);
+          flex-direction: column;
+          gap: 0;
+          padding: 80px 0 40px;
+          transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+          z-index: 150;
+        }
+        .nav-links.mobile-open {
+          right: 0;
+        }
+        .nav-links li {
+          border-bottom: 1px solid var(--border);
+        }
+        .nav-links a {
+          display: block;
+          padding: 16px 28px;
+          font-size: 1rem;
+        }
+
+        /* Section padding */
+        section {
+          padding: 80px 20px 60px;
+          min-height: auto;
+        }
+
+        /* HERO */
+        #home {
+          flex-direction: column;
+          align-items: flex-start;
+          padding-top: 100px;
+          gap: 48px;
+        }
+        .hero-left {
+          max-width: 100%;
+        }
+        .hero-title {
+          font-size: clamp(2.4rem, 9vw, 3.6rem);
+          letter-spacing: -1px;
+        }
+        .hero-btns {
+          flex-wrap: wrap;
+        }
+        .btn-primary,
+        .btn-outline {
+          cursor: pointer;
+          flex: 1;
+          min-width: 120px;
+          text-align: center;
+        }
+        .hero-right {
+          max-width: 100%;
+          width: 100%;
+        }
+        .hero-illustration {
+          width: 100%;
+          height: 300px;
+          max-width: 360px;
+          margin: 0 auto;
+        }
+
+        /* ABOUT */
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .about-text h2 {
+          font-size: 1.8rem;
+        }
+        .stats-row {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+        .stat-card {
+          padding: 14px 8px;
+        }
+        .stat-num {
+          font-size: 1.6rem;
+        }
+
+        /* PORTFOLIO TABS */
+        .portfolio-tabs {
+          max-width: 100%;
+          flex-wrap: wrap;
+        }
+        .tab-btn {
+          padding: 9px 12px;
+          font-size: 0.8rem;
+        }
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        .cert-grid {
+          grid-template-columns: 1fr;
+        }
+        .tech-grid {
+          gap: 8px;
+        }
+        .tech-item {
+          padding: 9px 14px;
+          font-size: 0.82rem;
+        }
+
+        /* CONTACT */
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .social-links {
+          grid-template-columns: 1fr;
+        }
+
+        /* MODAL */
+        #project-modal {
+          padding: 10px;
+          align-items: flex-end;
+        }
+        .modal-box {
+          border-radius: 20px 20px 0 0;
+          max-height: 92vh;
+        }
+        .modal-gallery {
+          height: 220px;
+          border-radius: 20px 20px 0 0;
+        }
+        .modal-content {
+          padding: 20px 18px 28px;
+        }
+        .modal-features {
+          grid-template-columns: 1fr;
+        }
+        .modal-title-group h2 {
+          font-size: 1.2rem;
+        }
+
+        /* BUTTONS cursor fix for touch */
+        .tab-btn,
+        .submit-btn,
+        .comment-submit,
+        .btn-primary,
+        .btn-outline {
+          cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+          padding: 20px;
+          text-align: center;
+        }
+
+        /* Section header */
+        .section-header {
+          margin-bottom: 40px;
+        }
+
+        /* Welcome overlay text smaller on phone */
+        .welcome-sub {
+          font-size: 0.75rem;
+          padding: 0 20px;
+          text-align: center;
+        }
+      }
+
+      /* Tablet (768px – 1024px) */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        nav {
+          padding: 18px 32px;
+        }
+        section {
+          padding: 90px 32px;
+        }
+        #home {
+          gap: 24px;
+        }
+        .hero-illustration {
+          width: 340px;
+          height: 320px;
+        }
+        .about-grid {
+          gap: 36px;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .projects-grid {
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+        footer {
+          padding: 20px 32px;
+        }
+      }
+
+      /* Perbaikan kecil agar ilustrasi tidak terpotong di layar kecil */
+      @media (max-width: 400px) {
+        .hero-illustration {
+          height: 260px;
+        }
+        .hero-card-1,
+        .hero-card-3 {
+          display: none;
+        }
+        .portfolio-tabs {
+          gap: 2px;
+          padding: 4px;
+        }
+        .tab-btn {
+          padding: 8px 6px;
+          font-size: 0.72rem;
+          gap: 3px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1918,7 +2190,10 @@
     <!-- Navbar -->
     <nav id="navbar">
       <div class="nav-logo">Farhan</div>
-      <ul class="nav-links">
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
@@ -1954,21 +2229,13 @@
           <div class="hero-btns">
             <button
               class="btn-primary"
-              onclick="
-                document
-                  .getElementById('portfolio')
-                  .scrollIntoView({ behavior: 'smooth' })
-              "
+              onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })"
             >
               ⚡ Projects
             </button>
             <button
               class="btn-outline"
-              onclick="
-                document
-                  .getElementById('contact')
-                  .scrollIntoView({ behavior: 'smooth' })
-              "
+              onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
             >
               ✉ Contact
             </button>
@@ -1986,70 +2253,36 @@
             </div>
             <div
               class="orbit-ring"
-              style="
-                width: 240px;
-                height: 240px;
-                animation-direction: reverse;
-                animation-duration: 14s;
-              "
+              style="width: 240px; height: 240px; animation-direction: reverse; animation-duration: 14s;"
             >
               <div
                 class="orbit-dot"
-                style="
-                  background: var(--cyan);
-                  box-shadow: 0 0 12px var(--cyan);
-                "
+                style="background: var(--cyan); box-shadow: 0 0 12px var(--cyan);"
               ></div>
             </div>
             <div class="hero-card hero-card-1">
-              <div
-                class="card-icon"
-                style="background: rgba(124, 58, 237, 0.2)"
-              >
-                🚀
-              </div>
+              <div class="card-icon" style="background: rgba(124, 58, 237, 0.2)">🚀</div>
               <div class="card-label">Status</div>
               <div class="card-value">Available</div>
             </div>
             <div class="hero-card hero-card-main">
               <div class="code-line">
                 <span class="code-kw">const</span>
-                <span class="code-fn">developer</span>
-                <span class="code-punct">= {</span><br />
-                <span style="padding-left: 12px"
-                  ><span class="code-str">"name"</span
-                  ><span class="code-punct">:</span>
-                  <span class="code-str">"Farhan"</span
-                  ><span class="code-punct">,</span></span
-                ><br />
-                <span style="padding-left: 12px"
-                  ><span class="code-str">"role"</span
-                  ><span class="code-punct">:</span>
-                  <span class="code-str">"Full Stacktend Dev"</span
-                  ><span class="code-punct">,</span></span
-                ><br />
-                <span style="padding-left: 12px"
-                  ><span class="code-str">"coffee"</span
-                  ><span class="code-punct">:</span>
-                  <span style="color: #f78c6c">true</span></span
-                ><br />
+                <span class="code-fn"> developer</span>
+                <span class="code-punct"> = {</span><br />
+                <span style="padding-left: 12px"><span class="code-str">"name"</span><span class="code-punct">:</span> <span class="code-str">"Farhan"</span><span class="code-punct">,</span></span><br />
+                <span style="padding-left: 12px"><span class="code-str">"role"</span><span class="code-punct">:</span> <span class="code-str">"Full Stack Dev"</span><span class="code-punct">,</span></span><br />
+                <span style="padding-left: 12px"><span class="code-str">"coffee"</span><span class="code-punct">:</span> <span style="color: #f78c6c">true</span></span><br />
                 <span class="code-punct">}</span>
               </div>
             </div>
             <div class="hero-card hero-card-2">
-              <div class="card-icon" style="background: rgba(6, 182, 212, 0.2)">
-                ⭐
-              </div>
+              <div class="card-icon" style="background: rgba(6, 182, 212, 0.2)">⭐</div>
               <div class="card-label">Experience</div>
               <div class="card-value">3 Years</div>
             </div>
             <div class="hero-card hero-card-3">
-              <div
-                class="card-icon"
-                style="background: rgba(236, 72, 153, 0.2)"
-              >
-                💡
-              </div>
+              <div class="card-icon" style="background: rgba(236, 72, 153, 0.2)">💡</div>
               <div class="card-label">Focus</div>
               <div class="card-value">Full-Stack</div>
             </div>
@@ -2064,9 +2297,7 @@
         <div class="section-header reveal">
           <span class="section-eyebrow">// who_am_i.js</span>
           <h2 class="section-title">About <span>Me</span></h2>
-          <p style="color: var(--muted); font-size: 0.9rem; margin-top: 8px">
-            ✦ Transforming ideas into digital experiences ✦
-          </p>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-top: 8px">✦ Transforming ideas into digital experiences ✦</p>
         </div>
         <div class="about-grid">
           <div class="about-photo-wrap reveal reveal-delay-1">
@@ -2075,26 +2306,9 @@
                 class="photo-img"
                 src="images/Photo.jpg"
                 alt="Muhammad Farhan"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
               />
-              <div
-                style="
-                  display: none;
-                  width: 100%;
-                  height: 100%;
-                  border-radius: 24px;
-                  background: linear-gradient(135deg, #1a1040, #0d1a30);
-                  align-items: center;
-                  justify-content: center;
-                  font-size: 5rem;
-                  border: 2px solid rgba(124, 58, 237, 0.3);
-                "
-              >
-                👨‍💻
-              </div>
+              <div style="display:none;width:100%;height:100%;border-radius:24px;background:linear-gradient(135deg,#1a1040,#0d1a30);align-items:center;justify-content:center;font-size:5rem;border:2px solid rgba(124,58,237,0.3);">👨‍💻</div>
               <div class="photo-ring"></div>
               <div class="photo-badge">🔥 Open to Work</div>
             </div>
@@ -2109,32 +2323,20 @@
             </p>
             <p>
               Selain itu, saya selalu berupaya memberikan solusi terbaik dalam
-              setiap proyek pengembangan aplikasi dan website yang saya
-              kerjakan.
+              setiap proyek pengembangan aplikasi dan website yang saya kerjakan.
             </p>
             <div class="quote-box">
               <p>"Leveraging AI as a professional tool, not a replacement."</p>
             </div>
-            <div style="display: flex; gap: 12px">
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
               <a href="images/cv.pdf" download>
-                <button
-                  class="btn-primary"
-                  style="font-size: 0.85rem; padding: 10px 22px"
-                >
-                  📄 Download CV
-                </button>
+                <button class="btn-primary" style="font-size: 0.85rem; padding: 10px 22px; cursor: pointer;">📄 Download CV</button>
               </a>
               <button
                 class="btn-outline"
-                style="font-size: 0.85rem; padding: 10px 22px"
-                onclick="
-                  document
-                    .getElementById('portfolio')
-                    .scrollIntoView({ behavior: 'smooth' })
-                "
-              >
-                ⌨ View Projects
-              </button>
+                style="font-size: 0.85rem; padding: 10px 22px; cursor: pointer;"
+                onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })"
+              >⌨ View Projects</button>
             </div>
             <div class="stats-row">
               <div class="stat-card">
@@ -2161,30 +2363,14 @@
         <div class="section-header reveal">
           <span class="section-eyebrow">// my_work.showcase</span>
           <h2 class="section-title"><span>Portfolio</span> Showcase</h2>
-          <p
-            style="
-              color: var(--muted);
-              font-size: 0.88rem;
-              margin-top: 8px;
-              max-width: 500px;
-              margin-left: auto;
-              margin-right: auto;
-            "
-          >
-            Explore my journey through projects, certifications, and technical
-            expertise.
+          <p style="color:var(--muted);font-size:0.88rem;margin-top:8px;max-width:500px;margin-left:auto;margin-right:auto;">
+            Explore my journey through projects, certifications, and technical expertise.
           </p>
         </div>
         <div class="portfolio-tabs reveal reveal-delay-1">
-          <button class="tab-btn active" onclick="switchTab('projects', this)">
-            ⌨ Projects
-          </button>
-          <button class="tab-btn" onclick="switchTab('certs', this)">
-            🏆 Certificates
-          </button>
-          <button class="tab-btn" onclick="switchTab('tech', this)">
-            ⚙ Tech Stack
-          </button>
+          <button class="tab-btn active" onclick="switchTab('projects', this)">⌨ Projects</button>
+          <button class="tab-btn" onclick="switchTab('certs', this)">🏆 Certificates</button>
+          <button class="tab-btn" onclick="switchTab('tech', this)">⚙ Tech Stack</button>
         </div>
 
         <!-- Projects Tab -->
@@ -2192,219 +2378,85 @@
           <div class="projects-grid">
             <div class="project-card reveal" onclick="openProjectModal(1)">
               <div class="project-thumb-wrap">
-                <img
-                  class="project-thumb"
-                  src="images/lp1.png"
-                  alt="Rental Notebook"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
-                />
-                <div class="project-thumb-placeholder" style="display: none">
-                  🛒
-                </div>
+                <img class="project-thumb" src="images/lp1.png" alt="Rental Notebook" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+                <div class="project-thumb-placeholder" style="display:none">🛒</div>
                 <div class="project-thumb-overlay">
-                  <span
-                    style="
-                      background: rgba(124, 58, 237, 0.9);
-                      padding: 8px 18px;
-                      border-radius: 8px;
-                      font-size: 0.82rem;
-                      font-weight: 600;
-                      color: #fff;
-                    "
-                    >🔍 Lihat Detail</span
-                  >
+                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
                 </div>
               </div>
               <div class="project-body">
                 <h3>Rental Notebook</h3>
-                <p>
-                  Sistem peminjaman laptop kekinian dengan kelola stok, jadwal
-                  reservasi, serta tampilan antarmuka yang responsif.
-                </p>
+                <p>Sistem peminjaman laptop kekinian dengan kelola stok, jadwal reservasi, serta tampilan antarmuka yang responsif.</p>
                 <div class="project-tags">
-                  <span class="project-tag">Laravel</span
-                  ><span class="project-tag">MySQL</span
-                  ><span class="project-tag">Bootstrap</span
-                  ><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Bootstrap</span><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
 
-            <div
-              class="project-card reveal reveal-delay-1"
-              onclick="openProjectModal(2)"
-            >
+            <div class="project-card reveal reveal-delay-1" onclick="openProjectModal(2)">
               <div class="project-thumb-wrap">
-                <img
-                  class="project-thumb"
-                  src="images/s1.png"
-                  alt="Pengajuan Sarana Sekolah"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
-                />
-                <div class="project-thumb-placeholder" style="display: none">
-                  💬
-                </div>
+                <img class="project-thumb" src="images/s1.png" alt="Pengajuan Sarana Sekolah" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+                <div class="project-thumb-placeholder" style="display:none">💬</div>
                 <div class="project-thumb-overlay">
-                  <span
-                    style="
-                      background: rgba(124, 58, 237, 0.9);
-                      padding: 8px 18px;
-                      border-radius: 8px;
-                      font-size: 0.82rem;
-                      font-weight: 600;
-                      color: #fff;
-                    "
-                    >🔍 Lihat Detail</span
-                  >
+                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
                 </div>
               </div>
               <div class="project-body">
                 <h3>Pengajuan Sarana Sekolah</h3>
-                <p>
-                  Aplikasi obrolan langsung lengkap dengan ruang diskusi,
-                  pemberitahuan, dan proteksi pesan ujung ke ujung berbasis
-                  Socket.io.
-                </p>
+                <p>Aplikasi obrolan langsung lengkap dengan ruang diskusi, pemberitahuan, dan proteksi pesan ujung ke ujung berbasis Socket.io.</p>
                 <div class="project-tags">
-                  <span class="project-tag">Laravel</span
-                  ><span class="project-tag">MySQL</span
-                  ><span class="project-tag">Bootstrap</span
-                  ><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Bootstrap</span><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
 
-            <div
-              class="project-card reveal reveal-delay-2"
-              onclick="openProjectModal(3)"
-            >
+            <div class="project-card reveal reveal-delay-2" onclick="openProjectModal(3)">
               <div class="project-thumb-wrap">
-                <img
-                  class="project-thumb"
-                  src="images/ab1.png"
-                  alt="Dashboard Analitik"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
-                />
-                <div class="project-thumb-placeholder" style="display: none">
-                  📊
-                </div>
+                <img class="project-thumb" src="images/ab1.png" alt="Presensi RFID" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+                <div class="project-thumb-placeholder" style="display:none">📊</div>
                 <div class="project-thumb-overlay">
-                  <span
-                    style="
-                      background: rgba(124, 58, 237, 0.9);
-                      padding: 8px 18px;
-                      border-radius: 8px;
-                      font-size: 0.82rem;
-                      font-weight: 600;
-                      color: #fff;
-                    "
-                    >🔍 Lihat Detail</span
-                  >
+                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
                 </div>
               </div>
               <div class="project-body">
                 <h3>Presensi RFID</h3>
                 <p>Aplikasi kehadiran dengan sistem ketuk kartu.</p>
                 <div class="project-tags">
-                  <span class="project-tag">Node.js</span>
-                  <span class="project-tag">Express.js</span>
-                  <span class="project-tag">MySQL</span>
-                  <span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Node.js</span><span class="project-tag">Express.js</span><span class="project-tag">MySQL</span><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
 
-            <div
-              class="project-card reveal reveal-delay-2"
-              onclick="openProjectModal(4)"
-            >
+            <div class="project-card reveal reveal-delay-2" onclick="openProjectModal(4)">
               <div class="project-thumb-wrap">
-                <img
-                  class="project-thumb"
-                  src="images/sr1.png"
-                  alt="Dashboard Analitik"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
-                />
-                <div class="project-thumb-placeholder" style="display: none">
-                  📊
-                </div>
+                <img class="project-thumb" src="images/sr1.png" alt="Tombol Darurat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+                <div class="project-thumb-placeholder" style="display:none">📊</div>
                 <div class="project-thumb-overlay">
-                  <span
-                    style="
-                      background: rgba(124, 58, 237, 0.9);
-                      padding: 8px 18px;
-                      border-radius: 8px;
-                      font-size: 0.82rem;
-                      font-weight: 600;
-                      color: #fff;
-                    "
-                    >🔍 Lihat Detail</span
-                  >
+                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
                 </div>
               </div>
               <div class="project-body">
                 <h3>Tombol Darurat</h3>
                 <p>Aplikasi tombol darurat untuk mengaktifkan alarm/sirine.</p>
                 <div class="project-tags">
-                  <span class="project-tag">Laravel</span
-                  ><span class="project-tag">MySQL</span
-                  ><span class="project-tag">Bootstrap</span
-                  ><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Bootstrap</span><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
 
-            <div
-              class="project-card reveal reveal-delay-2"
-              onclick="openProjectModal(5)"
-            >
+            <div class="project-card reveal reveal-delay-2" onclick="openProjectModal(5)">
               <div class="project-thumb-wrap">
-                <img
-                  class="project-thumb"
-                  src="images/k1.png"
-                  alt="Dashboard Analitik"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
-                />
-                <div class="project-thumb-placeholder" style="display: none">
-                  📊
-                </div>
+                <img class="project-thumb" src="images/k1.png" alt="Kantin Sehat Sekolah" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+                <div class="project-thumb-placeholder" style="display:none">📊</div>
                 <div class="project-thumb-overlay">
-                  <span
-                    style="
-                      background: rgba(124, 58, 237, 0.9);
-                      padding: 8px 18px;
-                      border-radius: 8px;
-                      font-size: 0.82rem;
-                      font-weight: 600;
-                      color: #fff;
-                    "
-                    >🔍 Lihat Detail</span
-                  >
+                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
                 </div>
               </div>
               <div class="project-body">
                 <h3>Kantin Sehat Sekolah</h3>
                 <p>Aplikasi pemesanan makanan dan minuman.</p>
                 <div class="project-tags">
-                  <span class="project-tag">Laravel</span
-                  ><span class="project-tag">MySQL</span
-                  ><span class="project-tag">Bootstrap</span
-                  ><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Bootstrap</span><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
@@ -2414,29 +2466,10 @@
         <!-- Certs Tab -->
         <div class="tab-content" id="tab-certs">
           <div class="cert-grid">
-            <div
-              class="cert-card reveal"
-              onclick="
-                openCertLightbox(
-                  'images/serti1.jpeg',
-                  'Sertifikat Praktek Kerja Industri',
-                  'PT LSKK • PKL 4 Bulan • 2025',
-                )
-              "
-            >
+            <div class="cert-card reveal" onclick="openCertLightbox('images/serti1.jpeg','Sertifikat Praktek Kerja Industri','PT LSKK • PKL 4 Bulan • 2025')">
               <div class="cert-thumb-wrap">
-                <img
-                  class="cert-thumb"
-                  src="images/serti1.jpeg"
-                  alt="React Certificate"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
-                />
-                <div class="cert-thumb-placeholder" style="display: none">
-                  🎓<span>Foto Sertifikat</span>
-                </div>
+                <img class="cert-thumb" src="images/serti1.jpeg" alt="React Certificate" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+                <div class="cert-thumb-placeholder" style="display:none">🎓<span>Foto Sertifikat</span></div>
                 <div class="cert-thumb-overlay"></div>
                 <div class="cert-view-btn">🔍 Lihat Sertifikat</div>
               </div>
@@ -2449,42 +2482,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- <div
-              class="cert-card reveal reveal-delay-1"
-              onclick="
-                openCertLightbox(
-                  'CERT_2.jpg',
-                  'JavaScript Advanced Concepts',
-                  'Zero To Mastery Academy • 2023',
-                )
-              "
-            >
-              <div class="cert-thumb-wrap">
-                <img
-                  class="cert-thumb"
-                  src="CERT_2.jpg"
-                  alt="JavaScript Certificate"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
-                />
-                <div class="cert-thumb-placeholder" style="display: none">
-                  ⚡<span>Foto Sertifikat</span>
-                </div>
-                <div class="cert-thumb-overlay"></div>
-                <div class="cert-view-btn">🔍 Lihat Sertifikat</div>
-              </div>
-              <div class="cert-body">
-                <div class="cert-icon">⚡</div>
-                <div class="cert-info">
-                  <h4>JavaScript Advanced Concepts</h4>
-                  <p>Zero To Mastery Academy</p>
-                  <span class="cert-badge">2023</span>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
 
@@ -2494,54 +2491,28 @@
             <div class="tech-category reveal">
               <h3>Frontend</h3>
               <div class="tech-grid">
-                <div class="tech-item">
-                  <span class="tech-icon">🌐</span> HTML
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">🎨</span> CSS
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">⚡</span> JavaScript
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">🅱️</span> Bootstrap
-                </div>
+                <div class="tech-item"><span class="tech-icon">🌐</span> HTML</div>
+                <div class="tech-item"><span class="tech-icon">🎨</span> CSS</div>
+                <div class="tech-item"><span class="tech-icon">⚡</span> JavaScript</div>
+                <div class="tech-item"><span class="tech-icon">🅱️</span> Bootstrap</div>
               </div>
             </div>
-
             <div class="tech-category reveal reveal-delay-1">
               <h3>Backend</h3>
               <div class="tech-grid">
-                <div class="tech-item">
-                  <span class="tech-icon">🐘</span> PHP
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">🔺</span> Laravel
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">🗄️</span> MySQL
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">🔥</span> Firebase
-                </div>
+                <div class="tech-item"><span class="tech-icon">🐘</span> PHP</div>
+                <div class="tech-item"><span class="tech-icon">🔺</span> Laravel</div>
+                <div class="tech-item"><span class="tech-icon">🗄️</span> MySQL</div>
+                <div class="tech-item"><span class="tech-icon">🔥</span> Firebase</div>
               </div>
             </div>
-
             <div class="tech-category reveal reveal-delay-2">
               <h3>Tools & Others</h3>
               <div class="tech-grid">
-                <div class="tech-item">
-                  <span class="tech-icon">💻</span> VS Code
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">🐙</span> GitHub
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">🎨</span> Figma
-                </div>
-                <div class="tech-item">
-                  <span class="tech-icon">🚀</span> Laragon
-                </div>
+                <div class="tech-item"><span class="tech-icon">💻</span> VS Code</div>
+                <div class="tech-item"><span class="tech-icon">🐙</span> GitHub</div>
+                <div class="tech-item"><span class="tech-icon">🎨</span> Figma</div>
+                <div class="tech-item"><span class="tech-icon">🚀</span> Laragon</div>
               </div>
             </div>
           </div>
@@ -2556,17 +2527,13 @@
           <span class="section-eyebrow">// lets_connect.sh</span>
           <h2 class="section-title">Hubungi <span>Saya</span></h2>
           <p style="color: var(--muted); font-size: 0.88rem; margin-top: 8px">
-            Punya pertanyaan? Kirimi saya pesan, dan saya akan segera
-            membalasnya.
+            Punya pertanyaan? Kirimi saya pesan, dan saya akan segera membalasnya.
           </p>
         </div>
         <div class="contact-grid">
           <div class="reveal">
             <h3>Hubungi</h3>
-            <p>
-              Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara
-              tentang project impian kamu.
-            </p>
+            <p>Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara tentang project impian kamu.</p>
             <div class="contact-form">
               <div class="form-group">
                 <label>👤 Nama Anda</label>
@@ -2578,9 +2545,7 @@
               </div>
               <div class="form-group">
                 <label>💬 Pesan Anda</label>
-                <textarea
-                  placeholder="Halo, saya ingin mendiskusikan..."
-                ></textarea>
+                <textarea placeholder="Halo, saya ingin mendiskusikan..."></textarea>
               </div>
               <button class="submit-btn">✈ Kirim Pesan</button>
             </div>
@@ -2588,54 +2553,28 @@
               <h4>// connect_with_me</h4>
               <div class="social-links">
                 <a href="https://github.com/raxsyi25" class="social-link-card">
-                  <div
-                    class="social-link-icon"
-                    style="background: rgba(124, 58, 237, 0.15)"
-                  >
-                    🐙
-                  </div>
+                  <div class="social-link-icon" style="background: rgba(124, 58, 237, 0.15)">🐙</div>
                   <div class="social-link-info">
                     <div class="social-link-name">GitHub</div>
                     <div class="social-link-handle">raxsyi25</div>
                   </div>
                 </a>
                 <a href="#" class="social-link-card">
-                  <div
-                    class="social-link-icon"
-                    style="background: rgba(0, 119, 181, 0.15)"
-                  >
-                    in
-                  </div>
+                  <div class="social-link-icon" style="background: rgba(0, 119, 181, 0.15)">in</div>
                   <div class="social-link-info">
                     <div class="social-link-name">LinkedIn</div>
                     <div class="social-link-handle">Let's Connect</div>
                   </div>
                 </a>
-                <a
-                  href="https://www.instagram.com/farhannnzt"
-                  class="social-link-card"
-                >
-                  <div
-                    class="social-link-icon"
-                    style="background: rgba(225, 48, 108, 0.15)"
-                  >
-                    📸
-                  </div>
+                <a href="https://www.instagram.com/farhannnzt" class="social-link-card">
+                  <div class="social-link-icon" style="background: rgba(225, 48, 108, 0.15)">📸</div>
                   <div class="social-link-info">
                     <div class="social-link-name">Instagram</div>
                     <div class="social-link-handle">@farhannnzt</div>
                   </div>
                 </a>
-                <a
-                  href="https://www.youtube.com/@raxsyihanz3881"
-                  class="social-link-card"
-                >
-                  <div
-                    class="social-link-icon"
-                    style="background: rgba(255, 0, 0, 0.1)"
-                  >
-                    ▶
-                  </div>
+                <a href="https://www.youtube.com/@raxsyihanz3881" class="social-link-card">
+                  <div class="social-link-icon" style="background: rgba(255, 0, 0, 0.1)">▶</div>
                   <div class="social-link-info">
                     <div class="social-link-name">YouTube</div>
                     <div class="social-link-handle">@RAXSYI HANZ</div>
@@ -2648,46 +2587,14 @@
             <div class="comments-header">
               <span>💬</span>
               <h3>Comments</h3>
-              <span class="comment-count" id="comment-count">1</span>
+              <span class="comment-count" id="comment-count">0</span>
             </div>
             <div class="comment-form">
               <input type="text" id="cname" placeholder="Enter your name" />
-              <textarea
-                id="cmsg"
-                placeholder="Write your message here..."
-              ></textarea>
-              <button class="comment-submit" onclick="addComment()">
-                📤 Post Comment
-              </button>
+              <textarea id="cmsg" placeholder="Write your message here..."></textarea>
+              <button class="comment-submit" onclick="addComment()">📤 Post Comment</button>
             </div>
-            <!-- <div id="comments-list">
-              <div class="comment-item">
-                <div
-                  class="comment-avatar"
-                  style="background: linear-gradient(135deg, #6366f1, #06b6d4)"
-                >
-                  JD
-                </div>
-                <div>
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      gap: 6px;
-                      margin-bottom: 4px;
-                    "
-                  >
-                    <span class="comment-name">John Doe</span>
-                    <span class="pinned-badge">📌 PINNED</span>
-                    <span class="comment-time">1d ago</span>
-                  </div>
-                  <p class="comment-text">
-                    Great portfolio website! Love the design and smooth
-                    animations. Keep it up! 🔥
-                  </p>
-                </div>
-              </div>
-            </div> -->
+            <div id="comments-list"></div>
           </div>
         </div>
       </section>
@@ -2700,19 +2607,8 @@
     <!-- CERT LIGHTBOX -->
     <div id="cert-lightbox" onclick="closeCertLightbox()">
       <div class="lightbox-close" onclick="closeCertLightbox()">✕</div>
-      <img
-        id="lightbox-img"
-        src=""
-        alt=""
-        onerror="
-          this.style.display = 'none';
-          document.getElementById('lightbox-ph').style.display = 'flex';
-        "
-      />
-      <div id="lightbox-ph" class="lightbox-placeholder">
-        🎓
-        <p>Foto sertifikat belum diupload</p>
-      </div>
+      <img id="lightbox-img" src="" alt="" onerror="this.style.display='none';document.getElementById('lightbox-ph').style.display='flex';"/>
+      <div id="lightbox-ph" class="lightbox-placeholder">🎓<p>Foto sertifikat belum diupload</p></div>
       <div class="lightbox-info">
         <h3 id="lightbox-title"></h3>
         <p id="lightbox-sub"></p>
@@ -2725,12 +2621,8 @@
         <div class="modal-gallery" id="modal-gallery">
           <div class="modal-slides" id="modal-slides"></div>
           <div class="modal-gallery-overlay"></div>
-          <button class="gallery-nav gallery-prev" onclick="galleryNav(-1)">
-            ‹
-          </button>
-          <button class="gallery-nav gallery-next" onclick="galleryNav(1)">
-            ›
-          </button>
+          <button class="gallery-nav gallery-prev" onclick="galleryNav(-1)">‹</button>
+          <button class="gallery-nav gallery-next" onclick="galleryNav(1)">›</button>
           <div class="gallery-dots" id="gallery-dots"></div>
         </div>
         <div class="modal-content">
@@ -2759,16 +2651,27 @@
         setTimeout(() => (overlay.style.display = "none"), 800);
       }, 2000);
 
+      // ── HAMBURGER MENU ────────────────────────────────────────────
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        navLinks.classList.toggle("mobile-open");
+      });
+      // Close nav when a link is clicked
+      navLinks.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          hamburger.classList.remove("open");
+          navLinks.classList.remove("mobile-open");
+        });
+      });
+
       // ── CUSTOM CURSOR ─────────────────────────────────────────────
       const cursor = document.getElementById("cursor");
       const ring = document.getElementById("cursorRing");
-      let mx = 0,
-        my = 0,
-        rx = 0,
-        ry = 0;
+      let mx = 0, my = 0, rx = 0, ry = 0;
       document.addEventListener("mousemove", (e) => {
-        mx = e.clientX;
-        my = e.clientY;
+        mx = e.clientX; my = e.clientY;
         cursor.style.left = mx + "px";
         cursor.style.top = my + "px";
       });
@@ -2780,26 +2683,18 @@
         requestAnimationFrame(animRing);
       }
       animRing();
-      document
-        .querySelectorAll(
-          "a,button,.project-card,.stat-card,.tech-item,.cert-card",
-        )
-        .forEach((el) => {
-          el.addEventListener("mouseenter", () => {
-            cursor.style.width = "20px";
-            cursor.style.height = "20px";
-            ring.style.width = "50px";
-            ring.style.height = "50px";
-            ring.style.borderColor = "rgba(167,139,250,0.8)";
-          });
-          el.addEventListener("mouseleave", () => {
-            cursor.style.width = "12px";
-            cursor.style.height = "12px";
-            ring.style.width = "36px";
-            ring.style.height = "36px";
-            ring.style.borderColor = "rgba(167,139,250,0.5)";
-          });
+      document.querySelectorAll("a,button,.project-card,.stat-card,.tech-item,.cert-card").forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          cursor.style.width = "20px"; cursor.style.height = "20px";
+          ring.style.width = "50px"; ring.style.height = "50px";
+          ring.style.borderColor = "rgba(167,139,250,0.8)";
         });
+        el.addEventListener("mouseleave", () => {
+          cursor.style.width = "12px"; cursor.style.height = "12px";
+          ring.style.width = "36px"; ring.style.height = "36px";
+          ring.style.borderColor = "rgba(167,139,250,0.5)";
+        });
+      });
 
       // ── PARTICLES ─────────────────────────────────────────────────
       function createParticles() {
@@ -2816,34 +2711,17 @@
       createParticles();
 
       // ── TYPEWRITER ────────────────────────────────────────────────
-      const texts = [
-        "Tech Enthusiast",
-        "React Developer",
-        "UI/UX Lover",
-        "Problem Solver",
-        "Full-Stack Dev",
-      ];
-      let ti = 0,
-        ci = 0,
-        del = false;
+      const texts = ["Tech Enthusiast","React Developer","UI/UX Lover","Problem Solver","Full-Stack Dev"];
+      let ti = 0, ci = 0, del = false;
       const tw = document.getElementById("typewriter");
       function typewrite() {
         const current = texts[ti];
         if (!del) {
-          tw.textContent = current.substring(0, ci + 1);
-          ci++;
-          if (ci === current.length) {
-            del = true;
-            setTimeout(typewrite, 1800);
-            return;
-          }
+          tw.textContent = current.substring(0, ci + 1); ci++;
+          if (ci === current.length) { del = true; setTimeout(typewrite, 1800); return; }
         } else {
-          tw.textContent = current.substring(0, ci - 1);
-          ci--;
-          if (ci === 0) {
-            del = false;
-            ti = (ti + 1) % texts.length;
-          }
+          tw.textContent = current.substring(0, ci - 1); ci--;
+          if (ci === 0) { del = false; ti = (ti + 1) % texts.length; }
         }
         setTimeout(typewrite, del ? 60 : 100);
       }
@@ -2851,120 +2729,81 @@
 
       // ── SCROLL PROGRESS ───────────────────────────────────────────
       window.addEventListener("scroll", () => {
-        const prog =
-          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
-          100;
+        const prog = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
         document.getElementById("scroll-progress").style.width = prog + "%";
       });
 
       // ── SCROLL REVEAL ─────────────────────────────────────────────
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              e.target.querySelectorAll("[data-count]").forEach((el) => {
-                const target = parseInt(el.dataset.count);
-                let current = 0;
-                const step = Math.ceil(target / 30);
-                const timer = setInterval(() => {
-                  current = Math.min(current + step, target);
-                  el.textContent = current;
-                  if (current >= target) clearInterval(timer);
-                }, 50);
-              });
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-      document
-        .querySelectorAll(".reveal")
-        .forEach((el) => observer.observe(el));
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            e.target.querySelectorAll("[data-count]").forEach((el) => {
+              const target = parseInt(el.dataset.count);
+              let current = 0;
+              const step = Math.ceil(target / 30);
+              const timer = setInterval(() => {
+                current = Math.min(current + step, target);
+                el.textContent = current;
+                if (current >= target) clearInterval(timer);
+              }, 50);
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
       // ── NAV ACTIVE ────────────────────────────────────────────────
       const sections = document.querySelectorAll("section[id]");
       window.addEventListener("scroll", () => {
         let current = "";
-        sections.forEach((s) => {
-          if (window.scrollY >= s.offsetTop - 100) current = s.id;
-        });
+        sections.forEach((s) => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
         document.querySelectorAll(".nav-links a").forEach((a) => {
-          a.classList.toggle(
-            "active",
-            a.getAttribute("href") === "#" + current,
-          );
+          a.classList.toggle("active", a.getAttribute("href") === "#" + current);
         });
       });
 
       // ── TABS ──────────────────────────────────────────────────────
       function switchTab(id, btn) {
-        // hide all
-        document.querySelectorAll(".tab-content").forEach((t) => {
-          t.classList.remove("active");
-        });
-        document
-          .querySelectorAll(".tab-btn")
-          .forEach((b) => b.classList.remove("active"));
-
-        // show selected
+        document.querySelectorAll(".tab-content").forEach((t) => t.classList.remove("active"));
+        document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
         const target = document.getElementById("tab-" + id);
         target.classList.add("active");
         btn.classList.add("active");
-
-        // re-trigger scroll reveal for items in this tab
-        target.querySelectorAll(".reveal").forEach((el) => {
-          el.classList.remove("visible");
-        });
-        setTimeout(() => {
-          target
-            .querySelectorAll(".reveal")
-            .forEach((el) => observer.observe(el));
-        }, 50);
+        target.querySelectorAll(".reveal").forEach((el) => el.classList.remove("visible"));
+        setTimeout(() => { target.querySelectorAll(".reveal").forEach((el) => observer.observe(el)); }, 50);
       }
 
       // ── SMOOTH SCROLL NAV ─────────────────────────────────────────
       document.querySelectorAll(".nav-links a").forEach((a) => {
         a.addEventListener("click", (e) => {
           e.preventDefault();
-          document
-            .querySelector(a.getAttribute("href"))
-            .scrollIntoView({ behavior: "smooth" });
+          document.querySelector(a.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
         });
       });
 
       // ── COMMENTS ─────────────────────────────────────────────────
-      let commentCount = 1;
+      let commentCount = 0;
       function addComment() {
         const name = document.getElementById("cname").value.trim();
         const msg = document.getElementById("cmsg").value.trim();
         if (!name || !msg) return;
         commentCount++;
         document.getElementById("comment-count").textContent = commentCount;
-        const initials = name
-          .split(" ")
-          .map((w) => w[0])
-          .join("")
-          .toUpperCase()
-          .substring(0, 2);
-        const colors = [
-          "#7c3aed,#a78bfa",
-          "#06b6d4,#0891b2",
-          "#ec4899,#f472b6",
-          "#f59e0b,#fbbf24",
-        ];
+        const initials = name.split(" ").map((w) => w[0]).join("").toUpperCase().substring(0, 2);
+        const colors = ["#7c3aed,#a78bfa","#06b6d4,#0891b2","#ec4899,#f472b6","#f59e0b,#fbbf24"];
         const color = colors[Math.floor(Math.random() * colors.length)];
         const div = document.createElement("div");
         div.className = "comment-item";
         div.innerHTML = `
-      <div class="comment-avatar" style="background:linear-gradient(135deg,${color});">${initials}</div>
-      <div>
-        <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
-          <span class="comment-name">${name}</span>
-          <span class="comment-time">Just now</span>
-        </div>
-        <p class="comment-text">${msg}</p>
-      </div>`;
+          <div class="comment-avatar" style="background:linear-gradient(135deg,${color});">${initials}</div>
+          <div>
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+              <span class="comment-name">${name}</span>
+              <span class="comment-time">Just now</span>
+            </div>
+            <p class="comment-text">${msg}</p>
+          </div>`;
         document.getElementById("comments-list").appendChild(div);
         document.getElementById("cname").value = "";
         document.getElementById("cmsg").value = "";
@@ -2975,13 +2814,9 @@
         const lb = document.getElementById("cert-lightbox");
         const img = document.getElementById("lightbox-img");
         const ph = document.getElementById("lightbox-ph");
-        img.style.display = "block";
-        ph.style.display = "none";
+        img.style.display = "block"; ph.style.display = "none";
         img.src = src;
-        img.onerror = () => {
-          img.style.display = "none";
-          ph.style.display = "flex";
-        };
+        img.onerror = () => { img.style.display = "none"; ph.style.display = "flex"; };
         document.getElementById("lightbox-title").textContent = title;
         document.getElementById("lightbox-sub").textContent = sub;
         lb.classList.add("open");
@@ -2993,94 +2828,47 @@
       }
 
       // ── PROJECT MODAL ─────────────────────────────────────────────
-      let currentSlide = 0;
-      let totalSlides = 0;
-
+      let currentSlide = 0, totalSlides = 0;
       const projectData = {
         1: {
           title: "Rental Notebook",
-          tags: ["Laravel", "MySQL", "Bootstrap", "Tailwind CSS"],
+          tags: ["Laravel","MySQL","Bootstrap","Tailwind CSS"],
           desc: "Sistem peminjaman laptop kekinian yang dibangun dengan React dan Node.js. Dilengkapi dengan fitur kelola stok barang, analitik penyewaan real-time, sistem reservasi, dan manajemen pengembalian yang efisien. Tampilan antarmuka yang responsif memastikan pengalaman peminjaman yang menyenangkan di semua perangkat.",
-          features: [
-            ["🛒", "Kelola stok laptop dengan CRUD lengkap"],
-            ["📊", "Dashboard analitik real-time"],
-            ["💳", "Integrasi pembayaran"],
-            ["📦", "Sistem manajemen reservasi"],
-            ["🔐", "Otentikasi JWT & akses berbasis peran"],
-            ["📱", "Desain responsif sepenuhnya"],
-          ],
-          photos: [
-            "images/lp1.png",
-            "images/lp2.png",
-            "images/lp3.png",
-            "images/lp4.png",
-          ],
-          emojis: ["🛒", "📊", "💳"],
+          features: [["🛒","Kelola stok laptop dengan CRUD lengkap"],["📊","Dashboard analitik real-time"],["💳","Integrasi pembayaran"],["📦","Sistem manajemen reservasi"],["🔐","Otentikasi JWT & akses berbasis peran"],["📱","Desain responsif sepenuhnya"]],
+          photos: ["images/lp1.png","images/lp2.png","images/lp3.png","images/lp4.png"],
+          emojis: ["🛒","📊","💳"],
         },
         2: {
           title: "Aplikasi Obrolan Langsung",
-          tags: ["Laravel", "MySQL", "Bootstrap", "Tailwind CSS"],
+          tags: ["Laravel","MySQL","Bootstrap","Tailwind CSS"],
           desc: "Aplikasi obrolan langsung yang dibangun menggunakan Socket.io untuk komunikasi dua arah secara instan. Mendukung banyak ruang diskusi, pesan pribadi, pemberitahuan push, dan fitur proteksi pesan ujung ke ujung untuk keamanan percakapan. Tampilan modern dengan animasi halus.",
-          features: [
-            ["💬", "Pesan real-time via Socket.io"],
-            ["🔒", "Proteksi ujung ke ujung"],
-            ["👥", "Banyak ruang obrolan"],
-            ["📎", "Berbagi berkas & gambar"],
-            ["🔔", "Pemberitahuan push"],
-            ["🟢", "Indikator status daring/luring"],
-          ],
-          photos: ["images/s1.png", "images/s2.png", "images/s3.png"],
-          emojis: ["💬", "🔒", "👥"],
+          features: [["💬","Pesan real-time via Socket.io"],["🔒","Proteksi ujung ke ujung"],["👥","Banyak ruang obrolan"],["📎","Berbagi berkas & gambar"],["🔔","Pemberitahuan push"],["🟢","Indikator status daring/luring"]],
+          photos: ["images/s1.png","images/s2.png","images/s3.png"],
+          emojis: ["💬","🔒","👥"],
         },
         3: {
           title: "Presensi RFID",
-          tags: ["Express", "TypeScript", "Chart.js", "Recharts"],
+          tags: ["Express","TypeScript","Chart.js","Recharts"],
           desc: "Aplikasi kehadiran interaktif yang menampilkan data presensi dalam bentuk visualisasi yang menarik dan mudah dipahami. Dilengkapi dengan berbagai jenis grafik, filter data dinamis, dan laporan yang dapat diekspor. Dibangun dengan Next.js untuk performa optimal.",
-          features: [
-            ["📈", "Berbagai tipe grafik interaktif"],
-            ["🔍", "Filter & telusuri data"],
-            ["📤", "Ekspor laporan ke PDF/Excel"],
-            ["🌙", "Mode gelap/terang"],
-            ["⚡", "Server-side rendering"],
-            ["🔄", "Refresh data otomatis real-time"],
-          ],
-          photos: ["images/ab1.png", "images/ab2.png", "images/ab3.png"],
-          emojis: ["📊", "📈", "🔍"],
+          features: [["📈","Berbagai tipe grafik interaktif"],["🔍","Filter & telusuri data"],["📤","Ekspor laporan ke PDF/Excel"],["🌙","Mode gelap/terang"],["⚡","Server-side rendering"],["🔄","Refresh data otomatis real-time"]],
+          photos: ["images/ab1.png","images/ab2.png","images/ab3.png"],
+          emojis: ["📊","📈","🔍"],
         },
         4: {
           title: "Tombol Darurat",
-          tags: ["Vue.js", "Nuxt", "GSAP", "Tailwind"],
+          tags: ["Vue.js","Nuxt","GSAP","Tailwind"],
           desc: "Aplikasi tombol darurat untuk mengaktifkan sirine/alarm. Dilengkapi notifikasi instan dan respons cepat. Tersedia mode uji coba dengan animasi GSAP yang halus. Output berupa panel kontrol yang siap digunakan.",
-          features: [
-            ["🚨", "Aktivasi sirine satu sentuhan"],
-            ["🔔", "Notifikasi darurat instan"],
-            ["📍", "Lokasi real-time"],
-            ["🧪", "Mode uji coba aman"],
-            ["📞", "Panggilan otomatis ke kontak darurat"],
-            ["📱", "Responsif di semua perangkat"],
-          ],
-          photos: ["images/sr1.png", "images/sr2.png", "images/sr3.png"],
-          emojis: ["🚨", "🔔", "📍"],
+          features: [["🚨","Aktivasi sirine satu sentuhan"],["🔔","Notifikasi darurat instan"],["📍","Lokasi real-time"],["🧪","Mode uji coba aman"],["📞","Panggilan otomatis ke kontak darurat"],["📱","Responsif di semua perangkat"]],
+          photos: ["images/sr1.png","images/sr2.png","images/sr3.png"],
+          emojis: ["🚨","🔔","📍"],
         },
         5: {
           title: "Kantin Sehat Sekolah",
-          tags: ["React", "Redux", "Firebase", "DnD"],
+          tags: ["React","Redux","Firebase","DnD"],
           desc: "Aplikasi pemesanan makanan dan minuman untuk kantin sehat sekolah. Mendukung daftar menu harian, sistem antrean, tenggat waktu pesanan, dan sinkronisasi cloud real-time via Firebase. Cocok untuk siswa maupun pengelola kantin.",
-          features: [
-            ["🍽️", "Daftar menu harian"],
-            ["🏷️", "Kategori makanan & minuman"],
-            ["⏰", "Batas waktu pesanan otomatis"],
-            ["☁️", "Sinkronisasi real-time via Firebase"],
-            ["📋", "Riwayat pemesanan"],
-            ["📊", "Pantau stok bahan"],
-          ],
-          photos: [
-            "images/k1.png",
-            "images/k2.png",
-            "images/k3.png",
-            "images/k4.png",
-          ],
-          emojis: ["🍽️", "📋", "☁️"],
+          features: [["🍽️","Daftar menu harian"],["🏷️","Kategori makanan & minuman"],["⏰","Batas waktu pesanan otomatis"],["☁️","Sinkronisasi real-time via Firebase"],["📋","Riwayat pemesanan"],["📊","Pantau stok bahan"]],
+          photos: ["images/k1.png","images/k2.png","images/k3.png","images/k4.png"],
+          emojis: ["🍽️","📋","☁️"],
         },
       };
 
@@ -3088,87 +2876,58 @@
         const data = projectData[id];
         if (!data) return;
         currentSlide = 0;
-
-        // Build slides
         const slidesEl = document.getElementById("modal-slides");
         const dotsEl = document.getElementById("gallery-dots");
-        slidesEl.innerHTML = "";
-        dotsEl.innerHTML = "";
+        slidesEl.innerHTML = ""; dotsEl.innerHTML = "";
         totalSlides = data.photos.length;
-
         data.photos.forEach((src, i) => {
           const slide = document.createElement("div");
           slide.className = "modal-slide";
-          slide.innerHTML = `
-        <img src="${src}" alt="Screenshot ${i + 1}"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="modal-slide-placeholder" style="display:none;">${data.emojis[i] || "🖥️"}<span>Foto Screenshot ${i + 1}</span></div>`;
+          slide.innerHTML = `<img src="${src}" alt="Screenshot ${i+1}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="modal-slide-placeholder" style="display:none;">${data.emojis[i]||"🖥️"}<span>Foto Screenshot ${i+1}</span></div>`;
           slidesEl.appendChild(slide);
-
           const dot = document.createElement("div");
           dot.className = "gallery-dot" + (i === 0 ? " active" : "");
-          dot.onclick = (e) => {
-            e.stopPropagation();
-            goToSlide(i);
-          };
+          dot.onclick = (e) => { e.stopPropagation(); goToSlide(i); };
           dotsEl.appendChild(dot);
         });
-
-        // Fill content
         document.getElementById("modal-title").textContent = data.title;
         document.getElementById("modal-desc").textContent = data.desc;
-
-        const tagsEl = document.getElementById("modal-tags");
-        tagsEl.innerHTML = data.tags
-          .map((t) => `<span class="project-tag">${t}</span>`)
-          .join("");
-
-        const featEl = document.getElementById("modal-features");
-        featEl.innerHTML = data.features
-          .map(
-            ([icon, text]) =>
-              `<div class="modal-feature"><span class="modal-feature-icon">${icon}</span><span>${text}</span></div>`,
-          )
-          .join("");
-
+        document.getElementById("modal-tags").innerHTML = data.tags.map(t => `<span class="project-tag">${t}</span>`).join("");
+        document.getElementById("modal-features").innerHTML = data.features.map(([icon, text]) => `<div class="modal-feature"><span class="modal-feature-icon">${icon}</span><span>${text}</span></div>`).join("");
         document.getElementById("project-modal").classList.add("open");
         document.body.style.overflow = "hidden";
         updateGallery();
       }
-
       function closeProjectModal() {
         document.getElementById("project-modal").classList.remove("open");
         document.body.style.overflow = "";
       }
       function closeModalOutside(e) {
-        if (e.target === document.getElementById("project-modal"))
-          closeProjectModal();
+        if (e.target === document.getElementById("project-modal")) closeProjectModal();
       }
-
       function galleryNav(dir) {
         currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
         updateGallery();
       }
-      function goToSlide(i) {
-        currentSlide = i;
-        updateGallery();
-      }
+      function goToSlide(i) { currentSlide = i; updateGallery(); }
       function updateGallery() {
-        document.getElementById("modal-slides").style.transform =
-          `translateX(-${currentSlide * 100}%)`;
-        document.querySelectorAll(".gallery-dot").forEach((d, i) => {
-          d.classList.toggle("active", i === currentSlide);
-        });
+        document.getElementById("modal-slides").style.transform = `translateX(-${currentSlide * 100}%)`;
+        document.querySelectorAll(".gallery-dot").forEach((d, i) => d.classList.toggle("active", i === currentSlide));
       }
-
-      // Keyboard esc to close
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          closeProjectModal();
-          closeCertLightbox();
-        }
+        if (e.key === "Escape") { closeProjectModal(); closeCertLightbox(); }
         if (e.key === "ArrowLeft") galleryNav(-1);
         if (e.key === "ArrowRight") galleryNav(1);
+      });
+
+      // Touch swipe untuk modal gallery
+      let touchStartX = 0;
+      document.getElementById("modal-gallery").addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+      });
+      document.getElementById("modal-gallery").addEventListener("touchend", (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) galleryNav(diff > 0 ? 1 : -1);
       });
     </script>
   </body>

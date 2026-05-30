@@ -2229,13 +2229,21 @@
           <div class="hero-btns">
             <button
               class="btn-primary"
-              onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })"
+              onclick="
+                document
+                  .getElementById('portfolio')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
             >
               ⚡ Projects
             </button>
             <button
               class="btn-outline"
-              onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
             >
               ✉ Contact
             </button>
@@ -2253,15 +2261,28 @@
             </div>
             <div
               class="orbit-ring"
-              style="width: 240px; height: 240px; animation-direction: reverse; animation-duration: 14s;"
+              style="
+                width: 240px;
+                height: 240px;
+                animation-direction: reverse;
+                animation-duration: 14s;
+              "
             >
               <div
                 class="orbit-dot"
-                style="background: var(--cyan); box-shadow: 0 0 12px var(--cyan);"
+                style="
+                  background: var(--cyan);
+                  box-shadow: 0 0 12px var(--cyan);
+                "
               ></div>
             </div>
             <div class="hero-card hero-card-1">
-              <div class="card-icon" style="background: rgba(124, 58, 237, 0.2)">🚀</div>
+              <div
+                class="card-icon"
+                style="background: rgba(124, 58, 237, 0.2)"
+              >
+                🚀
+              </div>
               <div class="card-label">Status</div>
               <div class="card-value">Available</div>
             </div>
@@ -2270,19 +2291,40 @@
                 <span class="code-kw">const</span>
                 <span class="code-fn"> developer</span>
                 <span class="code-punct"> = {</span><br />
-                <span style="padding-left: 12px"><span class="code-str">"name"</span><span class="code-punct">:</span> <span class="code-str">"Farhan"</span><span class="code-punct">,</span></span><br />
-                <span style="padding-left: 12px"><span class="code-str">"role"</span><span class="code-punct">:</span> <span class="code-str">"Full Stack Dev"</span><span class="code-punct">,</span></span><br />
-                <span style="padding-left: 12px"><span class="code-str">"coffee"</span><span class="code-punct">:</span> <span style="color: #f78c6c">true</span></span><br />
+                <span style="padding-left: 12px"
+                  ><span class="code-str">"name"</span
+                  ><span class="code-punct">:</span>
+                  <span class="code-str">"Farhan"</span
+                  ><span class="code-punct">,</span></span
+                ><br />
+                <span style="padding-left: 12px"
+                  ><span class="code-str">"role"</span
+                  ><span class="code-punct">:</span>
+                  <span class="code-str">"Full Stack Dev"</span
+                  ><span class="code-punct">,</span></span
+                ><br />
+                <span style="padding-left: 12px"
+                  ><span class="code-str">"coffee"</span
+                  ><span class="code-punct">:</span>
+                  <span style="color: #f78c6c">true</span></span
+                ><br />
                 <span class="code-punct">}</span>
               </div>
             </div>
             <div class="hero-card hero-card-2">
-              <div class="card-icon" style="background: rgba(6, 182, 212, 0.2)">⭐</div>
+              <div class="card-icon" style="background: rgba(6, 182, 212, 0.2)">
+                ⭐
+              </div>
               <div class="card-label">Experience</div>
               <div class="card-value">3 Years</div>
             </div>
             <div class="hero-card hero-card-3">
-              <div class="card-icon" style="background: rgba(236, 72, 153, 0.2)">💡</div>
+              <div
+                class="card-icon"
+                style="background: rgba(236, 72, 153, 0.2)"
+              >
+                💡
+              </div>
               <div class="card-label">Focus</div>
               <div class="card-value">Full-Stack</div>
             </div>
@@ -2297,7 +2339,9 @@
         <div class="section-header reveal">
           <span class="section-eyebrow">// who_am_i.js</span>
           <h2 class="section-title">About <span>Me</span></h2>
-          <p style="color: var(--muted); font-size: 0.9rem; margin-top: 8px">✦ Transforming ideas into digital experiences ✦</p>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-top: 8px">
+            ✦ Transforming ideas into digital experiences ✦
+          </p>
         </div>
         <div class="about-grid">
           <div class="about-photo-wrap reveal reveal-delay-1">
@@ -2306,9 +2350,26 @@
                 class="photo-img"
                 src="images/Photo.jpg"
                 alt="Muhammad Farhan"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
               />
-              <div style="display:none;width:100%;height:100%;border-radius:24px;background:linear-gradient(135deg,#1a1040,#0d1a30);align-items:center;justify-content:center;font-size:5rem;border:2px solid rgba(124,58,237,0.3);">👨‍💻</div>
+              <div
+                style="
+                  display: none;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 24px;
+                  background: linear-gradient(135deg, #1a1040, #0d1a30);
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 5rem;
+                  border: 2px solid rgba(124, 58, 237, 0.3);
+                "
+              >
+                👨‍💻
+              </div>
               <div class="photo-ring"></div>
               <div class="photo-badge">🔥 Open to Work</div>
             </div>
@@ -2323,32 +2384,48 @@
             </p>
             <p>
               Selain itu, saya selalu berupaya memberikan solusi terbaik dalam
-              setiap proyek pengembangan aplikasi dan website yang saya kerjakan.
+              setiap proyek pengembangan aplikasi dan website yang saya
+              kerjakan.
             </p>
             <div class="quote-box">
               <p>"Leveraging AI as a professional tool, not a replacement."</p>
             </div>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <div style="display: flex; gap: 12px; flex-wrap: wrap">
               <a href="images/cv.pdf" download>
-                <button class="btn-primary" style="font-size: 0.85rem; padding: 10px 22px; cursor: pointer;">📄 Download CV</button>
+                <button
+                  class="btn-primary"
+                  style="
+                    font-size: 0.85rem;
+                    padding: 10px 22px;
+                    cursor: pointer;
+                  "
+                >
+                  📄 Download CV
+                </button>
               </a>
               <button
                 class="btn-outline"
-                style="font-size: 0.85rem; padding: 10px 22px; cursor: pointer;"
-                onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })"
-              >⌨ View Projects</button>
+                style="font-size: 0.85rem; padding: 10px 22px; cursor: pointer"
+                onclick="
+                  document
+                    .getElementById('portfolio')
+                    .scrollIntoView({ behavior: 'smooth' })
+                "
+              >
+                ⌨ View Projects
+              </button>
             </div>
             <div class="stats-row">
               <div class="stat-card">
-                <span class="stat-num" data-count="12">0</span>
+                <span class="stat-num" data-count="5">0</span>
                 <div class="stat-label">Total Projects</div>
               </div>
               <div class="stat-card">
-                <span class="stat-num" data-count="5">0</span>
+                <span class="stat-num" data-count="1">0</span>
                 <div class="stat-label">Certificates</div>
               </div>
               <div class="stat-card">
-                <span class="stat-num" data-count="4">0</span>
+                <span class="stat-num" data-count="19">0</span>
                 <div class="stat-label">Years Exp</div>
               </div>
             </div>
@@ -2363,14 +2440,30 @@
         <div class="section-header reveal">
           <span class="section-eyebrow">// my_work.showcase</span>
           <h2 class="section-title"><span>Portfolio</span> Showcase</h2>
-          <p style="color:var(--muted);font-size:0.88rem;margin-top:8px;max-width:500px;margin-left:auto;margin-right:auto;">
-            Explore my journey through projects, certifications, and technical expertise.
+          <p
+            style="
+              color: var(--muted);
+              font-size: 0.88rem;
+              margin-top: 8px;
+              max-width: 500px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            Explore my journey through projects, certifications, and technical
+            expertise.
           </p>
         </div>
         <div class="portfolio-tabs reveal reveal-delay-1">
-          <button class="tab-btn active" onclick="switchTab('projects', this)">⌨ Projects</button>
-          <button class="tab-btn" onclick="switchTab('certs', this)">🏆 Certificates</button>
-          <button class="tab-btn" onclick="switchTab('tech', this)">⚙ Tech Stack</button>
+          <button class="tab-btn active" onclick="switchTab('projects', this)">
+            ⌨ Projects
+          </button>
+          <button class="tab-btn" onclick="switchTab('certs', this)">
+            🏆 Certificates
+          </button>
+          <button class="tab-btn" onclick="switchTab('tech', this)">
+            ⚙ Tech Stack
+          </button>
         </div>
 
         <!-- Projects Tab -->
@@ -2378,85 +2471,219 @@
           <div class="projects-grid">
             <div class="project-card reveal" onclick="openProjectModal(1)">
               <div class="project-thumb-wrap">
-                <img class="project-thumb" src="images/lp1.png" alt="Rental Notebook" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-                <div class="project-thumb-placeholder" style="display:none">🛒</div>
+                <img
+                  class="project-thumb"
+                  src="images/lp1.png"
+                  alt="Rental Notebook"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="project-thumb-placeholder" style="display: none">
+                  🛒
+                </div>
                 <div class="project-thumb-overlay">
-                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
+                  <span
+                    style="
+                      background: rgba(124, 58, 237, 0.9);
+                      padding: 8px 18px;
+                      border-radius: 8px;
+                      font-size: 0.82rem;
+                      font-weight: 600;
+                      color: #fff;
+                    "
+                    >🔍 Lihat Detail</span
+                  >
                 </div>
               </div>
               <div class="project-body">
                 <h3>Rental Notebook</h3>
-                <p>Sistem peminjaman laptop kekinian dengan kelola stok, jadwal reservasi, serta tampilan antarmuka yang responsif.</p>
+                <p>
+                  Sistem peminjaman laptop kekinian dengan kelola stok, jadwal
+                  reservasi, serta tampilan antarmuka yang responsif.
+                </p>
                 <div class="project-tags">
-                  <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Bootstrap</span><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Laravel</span
+                  ><span class="project-tag">MySQL</span
+                  ><span class="project-tag">Bootstrap</span
+                  ><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
 
-            <div class="project-card reveal reveal-delay-1" onclick="openProjectModal(2)">
+            <div
+              class="project-card reveal reveal-delay-1"
+              onclick="openProjectModal(2)"
+            >
               <div class="project-thumb-wrap">
-                <img class="project-thumb" src="images/s1.png" alt="Pengajuan Sarana Sekolah" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-                <div class="project-thumb-placeholder" style="display:none">💬</div>
+                <img
+                  class="project-thumb"
+                  src="images/s1.png"
+                  alt="Pengajuan Sarana Sekolah"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="project-thumb-placeholder" style="display: none">
+                  💬
+                </div>
                 <div class="project-thumb-overlay">
-                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
+                  <span
+                    style="
+                      background: rgba(124, 58, 237, 0.9);
+                      padding: 8px 18px;
+                      border-radius: 8px;
+                      font-size: 0.82rem;
+                      font-weight: 600;
+                      color: #fff;
+                    "
+                    >🔍 Lihat Detail</span
+                  >
                 </div>
               </div>
               <div class="project-body">
                 <h3>Pengajuan Sarana Sekolah</h3>
-                <p>Aplikasi obrolan langsung lengkap dengan ruang diskusi, pemberitahuan, dan proteksi pesan ujung ke ujung berbasis Socket.io.</p>
+                <p>
+                  Aplikasi obrolan langsung lengkap dengan ruang diskusi,
+                  pemberitahuan, dan proteksi pesan ujung ke ujung berbasis
+                  Socket.io.
+                </p>
                 <div class="project-tags">
-                  <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Bootstrap</span><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Laravel</span
+                  ><span class="project-tag">MySQL</span
+                  ><span class="project-tag">Bootstrap</span
+                  ><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
 
-            <div class="project-card reveal reveal-delay-2" onclick="openProjectModal(3)">
+            <div
+              class="project-card reveal reveal-delay-2"
+              onclick="openProjectModal(3)"
+            >
               <div class="project-thumb-wrap">
-                <img class="project-thumb" src="images/ab1.png" alt="Presensi RFID" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-                <div class="project-thumb-placeholder" style="display:none">📊</div>
+                <img
+                  class="project-thumb"
+                  src="images/ab1.png"
+                  alt="Presensi RFID"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="project-thumb-placeholder" style="display: none">
+                  📊
+                </div>
                 <div class="project-thumb-overlay">
-                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
+                  <span
+                    style="
+                      background: rgba(124, 58, 237, 0.9);
+                      padding: 8px 18px;
+                      border-radius: 8px;
+                      font-size: 0.82rem;
+                      font-weight: 600;
+                      color: #fff;
+                    "
+                    >🔍 Lihat Detail</span
+                  >
                 </div>
               </div>
               <div class="project-body">
                 <h3>Presensi RFID</h3>
                 <p>Aplikasi kehadiran dengan sistem ketuk kartu.</p>
                 <div class="project-tags">
-                  <span class="project-tag">Node.js</span><span class="project-tag">Express.js</span><span class="project-tag">MySQL</span><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Node.js</span
+                  ><span class="project-tag">Express.js</span
+                  ><span class="project-tag">MySQL</span
+                  ><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
 
-            <div class="project-card reveal reveal-delay-2" onclick="openProjectModal(4)">
+            <div
+              class="project-card reveal reveal-delay-2"
+              onclick="openProjectModal(4)"
+            >
               <div class="project-thumb-wrap">
-                <img class="project-thumb" src="images/sr1.png" alt="Tombol Darurat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-                <div class="project-thumb-placeholder" style="display:none">📊</div>
+                <img
+                  class="project-thumb"
+                  src="images/sr1.png"
+                  alt="Tombol Darurat"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="project-thumb-placeholder" style="display: none">
+                  📊
+                </div>
                 <div class="project-thumb-overlay">
-                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
+                  <span
+                    style="
+                      background: rgba(124, 58, 237, 0.9);
+                      padding: 8px 18px;
+                      border-radius: 8px;
+                      font-size: 0.82rem;
+                      font-weight: 600;
+                      color: #fff;
+                    "
+                    >🔍 Lihat Detail</span
+                  >
                 </div>
               </div>
               <div class="project-body">
                 <h3>Tombol Darurat</h3>
                 <p>Aplikasi tombol darurat untuk mengaktifkan alarm/sirine.</p>
                 <div class="project-tags">
-                  <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Bootstrap</span><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Laravel</span
+                  ><span class="project-tag">MySQL</span
+                  ><span class="project-tag">Bootstrap</span
+                  ><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
 
-            <div class="project-card reveal reveal-delay-2" onclick="openProjectModal(5)">
+            <div
+              class="project-card reveal reveal-delay-2"
+              onclick="openProjectModal(5)"
+            >
               <div class="project-thumb-wrap">
-                <img class="project-thumb" src="images/k1.png" alt="Kantin Sehat Sekolah" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-                <div class="project-thumb-placeholder" style="display:none">📊</div>
+                <img
+                  class="project-thumb"
+                  src="images/k1.png"
+                  alt="Kantin Sehat Sekolah"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="project-thumb-placeholder" style="display: none">
+                  📊
+                </div>
                 <div class="project-thumb-overlay">
-                  <span style="background:rgba(124,58,237,0.9);padding:8px 18px;border-radius:8px;font-size:0.82rem;font-weight:600;color:#fff;">🔍 Lihat Detail</span>
+                  <span
+                    style="
+                      background: rgba(124, 58, 237, 0.9);
+                      padding: 8px 18px;
+                      border-radius: 8px;
+                      font-size: 0.82rem;
+                      font-weight: 600;
+                      color: #fff;
+                    "
+                    >🔍 Lihat Detail</span
+                  >
                 </div>
               </div>
               <div class="project-body">
                 <h3>Kantin Sehat Sekolah</h3>
                 <p>Aplikasi pemesanan makanan dan minuman.</p>
                 <div class="project-tags">
-                  <span class="project-tag">Laravel</span><span class="project-tag">MySQL</span><span class="project-tag">Bootstrap</span><span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Laravel</span
+                  ><span class="project-tag">MySQL</span
+                  ><span class="project-tag">Bootstrap</span
+                  ><span class="project-tag">Tailwind CSS</span>
                 </div>
               </div>
             </div>
@@ -2466,10 +2693,29 @@
         <!-- Certs Tab -->
         <div class="tab-content" id="tab-certs">
           <div class="cert-grid">
-            <div class="cert-card reveal" onclick="openCertLightbox('images/serti1.jpeg','Sertifikat Praktek Kerja Industri','PT LSKK • PKL 4 Bulan • 2025')">
+            <div
+              class="cert-card reveal"
+              onclick="
+                openCertLightbox(
+                  'images/serti1.jpeg',
+                  'Sertifikat Praktek Kerja Industri',
+                  'PT LSKK • PKL 4 Bulan • 2025',
+                )
+              "
+            >
               <div class="cert-thumb-wrap">
-                <img class="cert-thumb" src="images/serti1.jpeg" alt="React Certificate" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-                <div class="cert-thumb-placeholder" style="display:none">🎓<span>Foto Sertifikat</span></div>
+                <img
+                  class="cert-thumb"
+                  src="images/serti1.jpeg"
+                  alt="React Certificate"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="cert-thumb-placeholder" style="display: none">
+                  🎓<span>Foto Sertifikat</span>
+                </div>
                 <div class="cert-thumb-overlay"></div>
                 <div class="cert-view-btn">🔍 Lihat Sertifikat</div>
               </div>
@@ -2489,30 +2735,77 @@
         <div class="tab-content" id="tab-tech">
           <div class="tech-stack">
             <div class="tech-category reveal">
-              <h3>Frontend</h3>
+              <h3>Technical Skills</h3>
               <div class="tech-grid">
-                <div class="tech-item"><span class="tech-icon">🌐</span> HTML</div>
-                <div class="tech-item"><span class="tech-icon">🎨</span> CSS</div>
-                <div class="tech-item"><span class="tech-icon">⚡</span> JavaScript</div>
-                <div class="tech-item"><span class="tech-icon">🅱️</span> Bootstrap</div>
+                <div class="tech-item">
+                  <span class="tech-icon">🌐</span> HTML
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🎨</span> CSS
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">⚡</span> JavaScript
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">⚛️</span> React.js (Basic)
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🐘</span> PHP
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🔺</span> Laravel
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🗄️</span> MySQL
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🐙</span> Git & GitHub
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">📱</span> Responsive Web Design
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🐛</span> Debugging
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🎨</span> Figma
+                </div>
               </div>
             </div>
+
             <div class="tech-category reveal reveal-delay-1">
-              <h3>Backend</h3>
+              <h3>AI Tools & Productivity</h3>
               <div class="tech-grid">
-                <div class="tech-item"><span class="tech-icon">🐘</span> PHP</div>
-                <div class="tech-item"><span class="tech-icon">🔺</span> Laravel</div>
-                <div class="tech-item"><span class="tech-icon">🗄️</span> MySQL</div>
-                <div class="tech-item"><span class="tech-icon">🔥</span> Firebase</div>
+                <div class="tech-item">
+                  <span class="tech-icon">🤖</span> ChatGPT
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🧠</span> DeepSeek
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🚀</span> Antigravity
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">💡</span> GitHub Copilot
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">✨</span> Claude
+                </div>
               </div>
             </div>
+
             <div class="tech-category reveal reveal-delay-2">
-              <h3>Tools & Others</h3>
+              <h3>Database</h3>
               <div class="tech-grid">
-                <div class="tech-item"><span class="tech-icon">💻</span> VS Code</div>
-                <div class="tech-item"><span class="tech-icon">🐙</span> GitHub</div>
-                <div class="tech-item"><span class="tech-icon">🎨</span> Figma</div>
-                <div class="tech-item"><span class="tech-icon">🚀</span> Laragon</div>
+                <div class="tech-item">
+                  <span class="tech-icon">🗄️</span> MySQL
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🐘</span> PostgreSQL
+                </div>
+                <div class="tech-item">
+                  <span class="tech-icon">🏛️</span> Oracle
+                </div>
               </div>
             </div>
           </div>
@@ -2527,13 +2820,17 @@
           <span class="section-eyebrow">// lets_connect.sh</span>
           <h2 class="section-title">Hubungi <span>Saya</span></h2>
           <p style="color: var(--muted); font-size: 0.88rem; margin-top: 8px">
-            Punya pertanyaan? Kirimi saya pesan, dan saya akan segera membalasnya.
+            Punya pertanyaan? Kirimi saya pesan, dan saya akan segera
+            membalasnya.
           </p>
         </div>
         <div class="contact-grid">
           <div class="reveal">
             <h3>Hubungi</h3>
-            <p>Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara tentang project impian kamu.</p>
+            <p>
+              Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara
+              tentang project impian kamu.
+            </p>
             <div class="contact-form">
               <div class="form-group">
                 <label>👤 Nama Anda</label>
@@ -2545,7 +2842,9 @@
               </div>
               <div class="form-group">
                 <label>💬 Pesan Anda</label>
-                <textarea placeholder="Halo, saya ingin mendiskusikan..."></textarea>
+                <textarea
+                  placeholder="Halo, saya ingin mendiskusikan..."
+                ></textarea>
               </div>
               <button class="submit-btn">✈ Kirim Pesan</button>
             </div>
@@ -2553,28 +2852,54 @@
               <h4>// connect_with_me</h4>
               <div class="social-links">
                 <a href="https://github.com/raxsyi25" class="social-link-card">
-                  <div class="social-link-icon" style="background: rgba(124, 58, 237, 0.15)">🐙</div>
+                  <div
+                    class="social-link-icon"
+                    style="background: rgba(124, 58, 237, 0.15)"
+                  >
+                    🐙
+                  </div>
                   <div class="social-link-info">
                     <div class="social-link-name">GitHub</div>
                     <div class="social-link-handle">raxsyi25</div>
                   </div>
                 </a>
                 <a href="#" class="social-link-card">
-                  <div class="social-link-icon" style="background: rgba(0, 119, 181, 0.15)">in</div>
+                  <div
+                    class="social-link-icon"
+                    style="background: rgba(0, 119, 181, 0.15)"
+                  >
+                    in
+                  </div>
                   <div class="social-link-info">
                     <div class="social-link-name">LinkedIn</div>
                     <div class="social-link-handle">Let's Connect</div>
                   </div>
                 </a>
-                <a href="https://www.instagram.com/farhannnzt" class="social-link-card">
-                  <div class="social-link-icon" style="background: rgba(225, 48, 108, 0.15)">📸</div>
+                <a
+                  href="https://www.instagram.com/farhannnzt"
+                  class="social-link-card"
+                >
+                  <div
+                    class="social-link-icon"
+                    style="background: rgba(225, 48, 108, 0.15)"
+                  >
+                    📸
+                  </div>
                   <div class="social-link-info">
                     <div class="social-link-name">Instagram</div>
                     <div class="social-link-handle">@farhannnzt</div>
                   </div>
                 </a>
-                <a href="https://www.youtube.com/@raxsyihanz3881" class="social-link-card">
-                  <div class="social-link-icon" style="background: rgba(255, 0, 0, 0.1)">▶</div>
+                <a
+                  href="https://www.youtube.com/@raxsyihanz3881"
+                  class="social-link-card"
+                >
+                  <div
+                    class="social-link-icon"
+                    style="background: rgba(255, 0, 0, 0.1)"
+                  >
+                    ▶
+                  </div>
                   <div class="social-link-info">
                     <div class="social-link-name">YouTube</div>
                     <div class="social-link-handle">@RAXSYI HANZ</div>
@@ -2591,8 +2916,13 @@
             </div>
             <div class="comment-form">
               <input type="text" id="cname" placeholder="Enter your name" />
-              <textarea id="cmsg" placeholder="Write your message here..."></textarea>
-              <button class="comment-submit" onclick="addComment()">📤 Post Comment</button>
+              <textarea
+                id="cmsg"
+                placeholder="Write your message here..."
+              ></textarea>
+              <button class="comment-submit" onclick="addComment()">
+                📤 Post Comment
+              </button>
             </div>
             <div id="comments-list"></div>
           </div>
@@ -2607,8 +2937,19 @@
     <!-- CERT LIGHTBOX -->
     <div id="cert-lightbox" onclick="closeCertLightbox()">
       <div class="lightbox-close" onclick="closeCertLightbox()">✕</div>
-      <img id="lightbox-img" src="" alt="" onerror="this.style.display='none';document.getElementById('lightbox-ph').style.display='flex';"/>
-      <div id="lightbox-ph" class="lightbox-placeholder">🎓<p>Foto sertifikat belum diupload</p></div>
+      <img
+        id="lightbox-img"
+        src=""
+        alt=""
+        onerror="
+          this.style.display = 'none';
+          document.getElementById('lightbox-ph').style.display = 'flex';
+        "
+      />
+      <div id="lightbox-ph" class="lightbox-placeholder">
+        🎓
+        <p>Foto sertifikat belum diupload</p>
+      </div>
       <div class="lightbox-info">
         <h3 id="lightbox-title"></h3>
         <p id="lightbox-sub"></p>
@@ -2621,8 +2962,12 @@
         <div class="modal-gallery" id="modal-gallery">
           <div class="modal-slides" id="modal-slides"></div>
           <div class="modal-gallery-overlay"></div>
-          <button class="gallery-nav gallery-prev" onclick="galleryNav(-1)">‹</button>
-          <button class="gallery-nav gallery-next" onclick="galleryNav(1)">›</button>
+          <button class="gallery-nav gallery-prev" onclick="galleryNav(-1)">
+            ‹
+          </button>
+          <button class="gallery-nav gallery-next" onclick="galleryNav(1)">
+            ›
+          </button>
           <div class="gallery-dots" id="gallery-dots"></div>
         </div>
         <div class="modal-content">
@@ -2659,7 +3004,7 @@
         navLinks.classList.toggle("mobile-open");
       });
       // Close nav when a link is clicked
-      navLinks.querySelectorAll("a").forEach(a => {
+      navLinks.querySelectorAll("a").forEach((a) => {
         a.addEventListener("click", () => {
           hamburger.classList.remove("open");
           navLinks.classList.remove("mobile-open");
@@ -2669,9 +3014,13 @@
       // ── CUSTOM CURSOR ─────────────────────────────────────────────
       const cursor = document.getElementById("cursor");
       const ring = document.getElementById("cursorRing");
-      let mx = 0, my = 0, rx = 0, ry = 0;
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
       document.addEventListener("mousemove", (e) => {
-        mx = e.clientX; my = e.clientY;
+        mx = e.clientX;
+        my = e.clientY;
         cursor.style.left = mx + "px";
         cursor.style.top = my + "px";
       });
@@ -2683,18 +3032,26 @@
         requestAnimationFrame(animRing);
       }
       animRing();
-      document.querySelectorAll("a,button,.project-card,.stat-card,.tech-item,.cert-card").forEach((el) => {
-        el.addEventListener("mouseenter", () => {
-          cursor.style.width = "20px"; cursor.style.height = "20px";
-          ring.style.width = "50px"; ring.style.height = "50px";
-          ring.style.borderColor = "rgba(167,139,250,0.8)";
+      document
+        .querySelectorAll(
+          "a,button,.project-card,.stat-card,.tech-item,.cert-card",
+        )
+        .forEach((el) => {
+          el.addEventListener("mouseenter", () => {
+            cursor.style.width = "20px";
+            cursor.style.height = "20px";
+            ring.style.width = "50px";
+            ring.style.height = "50px";
+            ring.style.borderColor = "rgba(167,139,250,0.8)";
+          });
+          el.addEventListener("mouseleave", () => {
+            cursor.style.width = "12px";
+            cursor.style.height = "12px";
+            ring.style.width = "36px";
+            ring.style.height = "36px";
+            ring.style.borderColor = "rgba(167,139,250,0.5)";
+          });
         });
-        el.addEventListener("mouseleave", () => {
-          cursor.style.width = "12px"; cursor.style.height = "12px";
-          ring.style.width = "36px"; ring.style.height = "36px";
-          ring.style.borderColor = "rgba(167,139,250,0.5)";
-        });
-      });
 
       // ── PARTICLES ─────────────────────────────────────────────────
       function createParticles() {
@@ -2711,17 +3068,34 @@
       createParticles();
 
       // ── TYPEWRITER ────────────────────────────────────────────────
-      const texts = ["Tech Enthusiast","React Developer","UI/UX Lover","Problem Solver","Full-Stack Dev"];
-      let ti = 0, ci = 0, del = false;
+      const texts = [
+        "Tech Enthusiast",
+        "React Developer",
+        "UI/UX Lover",
+        "Problem Solver",
+        "Full-Stack Dev",
+      ];
+      let ti = 0,
+        ci = 0,
+        del = false;
       const tw = document.getElementById("typewriter");
       function typewrite() {
         const current = texts[ti];
         if (!del) {
-          tw.textContent = current.substring(0, ci + 1); ci++;
-          if (ci === current.length) { del = true; setTimeout(typewrite, 1800); return; }
+          tw.textContent = current.substring(0, ci + 1);
+          ci++;
+          if (ci === current.length) {
+            del = true;
+            setTimeout(typewrite, 1800);
+            return;
+          }
         } else {
-          tw.textContent = current.substring(0, ci - 1); ci--;
-          if (ci === 0) { del = false; ti = (ti + 1) % texts.length; }
+          tw.textContent = current.substring(0, ci - 1);
+          ci--;
+          if (ci === 0) {
+            del = false;
+            ti = (ti + 1) % texts.length;
+          }
         }
         setTimeout(typewrite, del ? 60 : 100);
       }
@@ -2729,56 +3103,80 @@
 
       // ── SCROLL PROGRESS ───────────────────────────────────────────
       window.addEventListener("scroll", () => {
-        const prog = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        const prog =
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+          100;
         document.getElementById("scroll-progress").style.width = prog + "%";
       });
 
       // ── SCROLL REVEAL ─────────────────────────────────────────────
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("visible");
-            e.target.querySelectorAll("[data-count]").forEach((el) => {
-              const target = parseInt(el.dataset.count);
-              let current = 0;
-              const step = Math.ceil(target / 30);
-              const timer = setInterval(() => {
-                current = Math.min(current + step, target);
-                el.textContent = current;
-                if (current >= target) clearInterval(timer);
-              }, 50);
-            });
-          }
-        });
-      }, { threshold: 0.1 });
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              e.target.querySelectorAll("[data-count]").forEach((el) => {
+                const target = parseInt(el.dataset.count);
+                let current = 0;
+                const step = Math.ceil(target / 30);
+                const timer = setInterval(() => {
+                  current = Math.min(current + step, target);
+                  el.textContent = current;
+                  if (current >= target) clearInterval(timer);
+                }, 50);
+              });
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
 
       // ── NAV ACTIVE ────────────────────────────────────────────────
       const sections = document.querySelectorAll("section[id]");
       window.addEventListener("scroll", () => {
         let current = "";
-        sections.forEach((s) => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+        sections.forEach((s) => {
+          if (window.scrollY >= s.offsetTop - 100) current = s.id;
+        });
         document.querySelectorAll(".nav-links a").forEach((a) => {
-          a.classList.toggle("active", a.getAttribute("href") === "#" + current);
+          a.classList.toggle(
+            "active",
+            a.getAttribute("href") === "#" + current,
+          );
         });
       });
 
       // ── TABS ──────────────────────────────────────────────────────
       function switchTab(id, btn) {
-        document.querySelectorAll(".tab-content").forEach((t) => t.classList.remove("active"));
-        document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((t) => t.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((b) => b.classList.remove("active"));
         const target = document.getElementById("tab-" + id);
         target.classList.add("active");
         btn.classList.add("active");
-        target.querySelectorAll(".reveal").forEach((el) => el.classList.remove("visible"));
-        setTimeout(() => { target.querySelectorAll(".reveal").forEach((el) => observer.observe(el)); }, 50);
+        target
+          .querySelectorAll(".reveal")
+          .forEach((el) => el.classList.remove("visible"));
+        setTimeout(() => {
+          target
+            .querySelectorAll(".reveal")
+            .forEach((el) => observer.observe(el));
+        }, 50);
       }
 
       // ── SMOOTH SCROLL NAV ─────────────────────────────────────────
       document.querySelectorAll(".nav-links a").forEach((a) => {
         a.addEventListener("click", (e) => {
           e.preventDefault();
-          document.querySelector(a.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+          document
+            .querySelector(a.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
         });
       });
 
@@ -2790,8 +3188,18 @@
         if (!name || !msg) return;
         commentCount++;
         document.getElementById("comment-count").textContent = commentCount;
-        const initials = name.split(" ").map((w) => w[0]).join("").toUpperCase().substring(0, 2);
-        const colors = ["#7c3aed,#a78bfa","#06b6d4,#0891b2","#ec4899,#f472b6","#f59e0b,#fbbf24"];
+        const initials = name
+          .split(" ")
+          .map((w) => w[0])
+          .join("")
+          .toUpperCase()
+          .substring(0, 2);
+        const colors = [
+          "#7c3aed,#a78bfa",
+          "#06b6d4,#0891b2",
+          "#ec4899,#f472b6",
+          "#f59e0b,#fbbf24",
+        ];
         const color = colors[Math.floor(Math.random() * colors.length)];
         const div = document.createElement("div");
         div.className = "comment-item";
@@ -2814,9 +3222,13 @@
         const lb = document.getElementById("cert-lightbox");
         const img = document.getElementById("lightbox-img");
         const ph = document.getElementById("lightbox-ph");
-        img.style.display = "block"; ph.style.display = "none";
+        img.style.display = "block";
+        ph.style.display = "none";
         img.src = src;
-        img.onerror = () => { img.style.display = "none"; ph.style.display = "flex"; };
+        img.onerror = () => {
+          img.style.display = "none";
+          ph.style.display = "flex";
+        };
         document.getElementById("lightbox-title").textContent = title;
         document.getElementById("lightbox-sub").textContent = sub;
         lb.classList.add("open");
@@ -2828,47 +3240,93 @@
       }
 
       // ── PROJECT MODAL ─────────────────────────────────────────────
-      let currentSlide = 0, totalSlides = 0;
+      let currentSlide = 0,
+        totalSlides = 0;
       const projectData = {
         1: {
           title: "Rental Notebook",
-          tags: ["Laravel","MySQL","Bootstrap","Tailwind CSS"],
+          tags: ["Laravel", "MySQL", "Bootstrap", "Tailwind CSS"],
           desc: "Sistem peminjaman laptop kekinian yang dibangun dengan React dan Node.js. Dilengkapi dengan fitur kelola stok barang, analitik penyewaan real-time, sistem reservasi, dan manajemen pengembalian yang efisien. Tampilan antarmuka yang responsif memastikan pengalaman peminjaman yang menyenangkan di semua perangkat.",
-          features: [["🛒","Kelola stok laptop dengan CRUD lengkap"],["📊","Dashboard analitik real-time"],["💳","Integrasi pembayaran"],["📦","Sistem manajemen reservasi"],["🔐","Otentikasi JWT & akses berbasis peran"],["📱","Desain responsif sepenuhnya"]],
-          photos: ["images/lp1.png","images/lp2.png","images/lp3.png","images/lp4.png"],
-          emojis: ["🛒","📊","💳"],
+          features: [
+            ["🛒", "Kelola stok laptop dengan CRUD lengkap"],
+            ["📊", "Dashboard analitik real-time"],
+            ["💳", "Integrasi pembayaran"],
+            ["📦", "Sistem manajemen reservasi"],
+            ["🔐", "Otentikasi JWT & akses berbasis peran"],
+            ["📱", "Desain responsif sepenuhnya"],
+          ],
+          photos: [
+            "images/lp1.png",
+            "images/lp2.png",
+            "images/lp3.png",
+            "images/lp4.png",
+          ],
+          emojis: ["🛒", "📊", "💳"],
         },
         2: {
           title: "Aplikasi Obrolan Langsung",
-          tags: ["Laravel","MySQL","Bootstrap","Tailwind CSS"],
+          tags: ["Laravel", "MySQL", "Bootstrap", "Tailwind CSS"],
           desc: "Aplikasi obrolan langsung yang dibangun menggunakan Socket.io untuk komunikasi dua arah secara instan. Mendukung banyak ruang diskusi, pesan pribadi, pemberitahuan push, dan fitur proteksi pesan ujung ke ujung untuk keamanan percakapan. Tampilan modern dengan animasi halus.",
-          features: [["💬","Pesan real-time via Socket.io"],["🔒","Proteksi ujung ke ujung"],["👥","Banyak ruang obrolan"],["📎","Berbagi berkas & gambar"],["🔔","Pemberitahuan push"],["🟢","Indikator status daring/luring"]],
-          photos: ["images/s1.png","images/s2.png","images/s3.png"],
-          emojis: ["💬","🔒","👥"],
+          features: [
+            ["💬", "Pesan real-time via Socket.io"],
+            ["🔒", "Proteksi ujung ke ujung"],
+            ["👥", "Banyak ruang obrolan"],
+            ["📎", "Berbagi berkas & gambar"],
+            ["🔔", "Pemberitahuan push"],
+            ["🟢", "Indikator status daring/luring"],
+          ],
+          photos: ["images/s1.png", "images/s2.png", "images/s3.png"],
+          emojis: ["💬", "🔒", "👥"],
         },
         3: {
           title: "Presensi RFID",
-          tags: ["Express","TypeScript","Chart.js","Recharts"],
+          tags: ["Express", "TypeScript", "Chart.js", "Recharts"],
           desc: "Aplikasi kehadiran interaktif yang menampilkan data presensi dalam bentuk visualisasi yang menarik dan mudah dipahami. Dilengkapi dengan berbagai jenis grafik, filter data dinamis, dan laporan yang dapat diekspor. Dibangun dengan Next.js untuk performa optimal.",
-          features: [["📈","Berbagai tipe grafik interaktif"],["🔍","Filter & telusuri data"],["📤","Ekspor laporan ke PDF/Excel"],["🌙","Mode gelap/terang"],["⚡","Server-side rendering"],["🔄","Refresh data otomatis real-time"]],
-          photos: ["images/ab1.png","images/ab2.png","images/ab3.png"],
-          emojis: ["📊","📈","🔍"],
+          features: [
+            ["📈", "Berbagai tipe grafik interaktif"],
+            ["🔍", "Filter & telusuri data"],
+            ["📤", "Ekspor laporan ke PDF/Excel"],
+            ["🌙", "Mode gelap/terang"],
+            ["⚡", "Server-side rendering"],
+            ["🔄", "Refresh data otomatis real-time"],
+          ],
+          photos: ["images/ab1.png", "images/ab2.png", "images/ab3.png"],
+          emojis: ["📊", "📈", "🔍"],
         },
         4: {
           title: "Tombol Darurat",
-          tags: ["Vue.js","Nuxt","GSAP","Tailwind"],
+          tags: ["Vue.js", "Nuxt", "GSAP", "Tailwind"],
           desc: "Aplikasi tombol darurat untuk mengaktifkan sirine/alarm. Dilengkapi notifikasi instan dan respons cepat. Tersedia mode uji coba dengan animasi GSAP yang halus. Output berupa panel kontrol yang siap digunakan.",
-          features: [["🚨","Aktivasi sirine satu sentuhan"],["🔔","Notifikasi darurat instan"],["📍","Lokasi real-time"],["🧪","Mode uji coba aman"],["📞","Panggilan otomatis ke kontak darurat"],["📱","Responsif di semua perangkat"]],
-          photos: ["images/sr1.png","images/sr2.png","images/sr3.png"],
-          emojis: ["🚨","🔔","📍"],
+          features: [
+            ["🚨", "Aktivasi sirine satu sentuhan"],
+            ["🔔", "Notifikasi darurat instan"],
+            ["📍", "Lokasi real-time"],
+            ["🧪", "Mode uji coba aman"],
+            ["📞", "Panggilan otomatis ke kontak darurat"],
+            ["📱", "Responsif di semua perangkat"],
+          ],
+          photos: ["images/sr1.png", "images/sr2.png", "images/sr3.png"],
+          emojis: ["🚨", "🔔", "📍"],
         },
         5: {
           title: "Kantin Sehat Sekolah",
-          tags: ["React","Redux","Firebase","DnD"],
+          tags: ["React", "Redux", "Firebase", "DnD"],
           desc: "Aplikasi pemesanan makanan dan minuman untuk kantin sehat sekolah. Mendukung daftar menu harian, sistem antrean, tenggat waktu pesanan, dan sinkronisasi cloud real-time via Firebase. Cocok untuk siswa maupun pengelola kantin.",
-          features: [["🍽️","Daftar menu harian"],["🏷️","Kategori makanan & minuman"],["⏰","Batas waktu pesanan otomatis"],["☁️","Sinkronisasi real-time via Firebase"],["📋","Riwayat pemesanan"],["📊","Pantau stok bahan"]],
-          photos: ["images/k1.png","images/k2.png","images/k3.png","images/k4.png"],
-          emojis: ["🍽️","📋","☁️"],
+          features: [
+            ["🍽️", "Daftar menu harian"],
+            ["🏷️", "Kategori makanan & minuman"],
+            ["⏰", "Batas waktu pesanan otomatis"],
+            ["☁️", "Sinkronisasi real-time via Firebase"],
+            ["📋", "Riwayat pemesanan"],
+            ["📊", "Pantau stok bahan"],
+          ],
+          photos: [
+            "images/k1.png",
+            "images/k2.png",
+            "images/k3.png",
+            "images/k4.png",
+          ],
+          emojis: ["🍽️", "📋", "☁️"],
         },
       };
 
@@ -2878,22 +3336,33 @@
         currentSlide = 0;
         const slidesEl = document.getElementById("modal-slides");
         const dotsEl = document.getElementById("gallery-dots");
-        slidesEl.innerHTML = ""; dotsEl.innerHTML = "";
+        slidesEl.innerHTML = "";
+        dotsEl.innerHTML = "";
         totalSlides = data.photos.length;
         data.photos.forEach((src, i) => {
           const slide = document.createElement("div");
           slide.className = "modal-slide";
-          slide.innerHTML = `<img src="${src}" alt="Screenshot ${i+1}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="modal-slide-placeholder" style="display:none;">${data.emojis[i]||"🖥️"}<span>Foto Screenshot ${i+1}</span></div>`;
+          slide.innerHTML = `<img src="${src}" alt="Screenshot ${i + 1}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="modal-slide-placeholder" style="display:none;">${data.emojis[i] || "🖥️"}<span>Foto Screenshot ${i + 1}</span></div>`;
           slidesEl.appendChild(slide);
           const dot = document.createElement("div");
           dot.className = "gallery-dot" + (i === 0 ? " active" : "");
-          dot.onclick = (e) => { e.stopPropagation(); goToSlide(i); };
+          dot.onclick = (e) => {
+            e.stopPropagation();
+            goToSlide(i);
+          };
           dotsEl.appendChild(dot);
         });
         document.getElementById("modal-title").textContent = data.title;
         document.getElementById("modal-desc").textContent = data.desc;
-        document.getElementById("modal-tags").innerHTML = data.tags.map(t => `<span class="project-tag">${t}</span>`).join("");
-        document.getElementById("modal-features").innerHTML = data.features.map(([icon, text]) => `<div class="modal-feature"><span class="modal-feature-icon">${icon}</span><span>${text}</span></div>`).join("");
+        document.getElementById("modal-tags").innerHTML = data.tags
+          .map((t) => `<span class="project-tag">${t}</span>`)
+          .join("");
+        document.getElementById("modal-features").innerHTML = data.features
+          .map(
+            ([icon, text]) =>
+              `<div class="modal-feature"><span class="modal-feature-icon">${icon}</span><span>${text}</span></div>`,
+          )
+          .join("");
         document.getElementById("project-modal").classList.add("open");
         document.body.style.overflow = "hidden";
         updateGallery();
@@ -2903,32 +3372,46 @@
         document.body.style.overflow = "";
       }
       function closeModalOutside(e) {
-        if (e.target === document.getElementById("project-modal")) closeProjectModal();
+        if (e.target === document.getElementById("project-modal"))
+          closeProjectModal();
       }
       function galleryNav(dir) {
         currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
         updateGallery();
       }
-      function goToSlide(i) { currentSlide = i; updateGallery(); }
+      function goToSlide(i) {
+        currentSlide = i;
+        updateGallery();
+      }
       function updateGallery() {
-        document.getElementById("modal-slides").style.transform = `translateX(-${currentSlide * 100}%)`;
-        document.querySelectorAll(".gallery-dot").forEach((d, i) => d.classList.toggle("active", i === currentSlide));
+        document.getElementById("modal-slides").style.transform =
+          `translateX(-${currentSlide * 100}%)`;
+        document
+          .querySelectorAll(".gallery-dot")
+          .forEach((d, i) => d.classList.toggle("active", i === currentSlide));
       }
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") { closeProjectModal(); closeCertLightbox(); }
+        if (e.key === "Escape") {
+          closeProjectModal();
+          closeCertLightbox();
+        }
         if (e.key === "ArrowLeft") galleryNav(-1);
         if (e.key === "ArrowRight") galleryNav(1);
       });
 
       // Touch swipe untuk modal gallery
       let touchStartX = 0;
-      document.getElementById("modal-gallery").addEventListener("touchstart", (e) => {
-        touchStartX = e.touches[0].clientX;
-      });
-      document.getElementById("modal-gallery").addEventListener("touchend", (e) => {
-        const diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) galleryNav(diff > 0 ? 1 : -1);
-      });
+      document
+        .getElementById("modal-gallery")
+        .addEventListener("touchstart", (e) => {
+          touchStartX = e.touches[0].clientX;
+        });
+      document
+        .getElementById("modal-gallery")
+        .addEventListener("touchend", (e) => {
+          const diff = touchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 40) galleryNav(diff > 0 ? 1 : -1);
+        });
     </script>
   </body>
 </html>
